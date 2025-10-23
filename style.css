@@ -1,0 +1,644 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; 
+  width: 100%;
+  background: linear-gradient(135deg, #a002fc, #4502fc, #02c8f5);
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto 2fr auto; 
+  min-height: 100vh; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+
+.navbar {
+  grid-column: 1/11;
+  padding: 20px 40px;
+  background: linear-gradient(90deg, #0011ff, #ff0040);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(255, 0, 64, 0.6), 0 0 20px rgba(0, 17, 255, 0.6);
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 64, 0.6), 0 0 20px rgba(0, 17, 255, 0.6); }
+  50% { box-shadow: 0 0 40px rgba(255, 100, 0, 0.9), 0 0 40px rgba(0, 255, 255, 0.8); }
+}
+
+
+
+
+.navbar #menu {
+  display: none;
+}
+
+
+.navbar #logo {
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: black;
+}
+
+.navbar #logo :hover {
+  color: #0105f0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar li {
+  padding-inline: 50px;
+}
+
+.navbar a {
+  font-size: 1.3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar a:hover {
+  color: hsl(197, 54%, 97%);
+}
+
+.image-section {
+  grid-column: 1/5;
+  text-align: center;
+  padding: 4rem 0 0 0;
+}
+
+.image-section img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 1s ease, filter 0.6s ease;
+  filter: drop-shadow(0 0 25px #02f7ff); 
+  cursor: pointer;
+}
+
+.image-section img:hover {
+  transform: scale(1.2); 
+  filter: drop-shadow(0 0 70px #f10418); 
+}
+
+.text-section {
+  grid-column: 5/11;
+  display: grid;
+  place-content: center;
+  color: white;
+}
+
+.text-section ul {
+  list-style: none;
+  flex-direction: column;
+}
+
+.text-section li:nth-child(1) {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.text-section li:nth-child(2) {
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+.text-section p {
+  margin-top: 60px;
+  font-style: italic;
+  font-size: 2rem;
+  color: white;
+
+}
+
+.text-section :hover {
+  color: hwb(128 2% 3%);
+}
+
+.footer {
+  grid-column: 1/11;
+  height: 5vh;
+}
+
+@media screen and (max-width: 990px) {
+  body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; 
+  width: 100%;
+  background: linear-gradient(135deg, #8c02db, #7b03dd, #03b2da);
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+  .navbar {
+  background: linear-gradient(90deg, #02ce24, #03a9d3);
+}
+
+
+  .navbar #menu {
+    display: none;
+  }
+
+  .navbar ul li a {
+    font-size: 1.1rem;
+  }
+
+  .navbar #logo {
+    font-size: 1.8rem;
+  }
+
+  .image-section {
+    grid-column: 1/11;
+    padding-top: 10px;
+  }
+
+  .image-section img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .text-section {
+    grid-column: 1/11;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  .text-section li:nth-child(1) {
+    font-size: 1.8rem;
+  }
+
+  .text-section li:nth-child(2) {
+    font-size: 1.2rem;
+  }
+
+  .text-section p {
+    margin-top: 40px;
+    font-style: initial;
+    font-size: 1.8rem;
+    color: white;
+  }
+}
+
+
+  
+  @media screen and (max-width: 900px) {
+  body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; 
+  width: 100%;
+  background: linear-gradient(135deg, #6e02ac, #3502c0, #0295b6);
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+   
+    .navbar {
+    background: linear-gradient(90deg, #02ac1e, #0183a3); 
+    }
+
+    .navbar #menu {
+      display: none;
+    }
+
+    .navbar ul li a {
+      font-size: 1.1rem;
+    }
+
+    .navbar #logo {
+      font-size: 1.8rem;
+    }
+
+    .image-section {
+      grid-column: 1/11;
+      padding-top: 8px;
+    }
+
+    .image-section img {
+      width: 290px;
+      height: 290px;
+    }
+
+    .text-section {
+      grid-column: 1/11;
+      padding-top: 1rem;
+      text-align: center;
+    }
+
+    .text-section li:nth-child(1) {
+      font-size: 1.5rem;
+    }
+
+    .text-section li:nth-child(2) {
+      font-size: 1.2rem;
+    }
+  }
+ 
+  @media screen and (max-width: 800px) {
+
+  body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #a328eb, #5622e6, #38cbec);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+    .navbar {
+    background: linear-gradient(90deg, #017e16, #016680);  
+    }
+
+    .navbar li {
+      padding-inline: 30px;
+    }
+
+
+    .navbar #logo {
+      font-size: 25px;
+      margin-left: 17px;
+    }
+
+    .navbar #menu {
+      display: none;
+    }
+
+    .image-section {
+      grid-column: 1/11;
+      padding-top: 10px;
+    }
+
+    .image-section img {
+      width: 280px;
+      height: 280px;
+    }
+
+    .text-section {
+      grid-column: 1/11;
+      padding-top: 1rem;
+      text-align: center;
+    }
+
+    .text-section li:nth-child(1) {
+      font-size: 1.4rem;
+    }
+
+    .text-section li:nth-child(2) {
+      font-size: 1.2rem;
+    }
+
+    .text-section p {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 1.5rem;
+      color: white;
+    }
+  }
+
+@media screen and (max-width: 700px) {
+  body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; 
+  width: 100%;
+  background: linear-gradient(135deg, #331c41, #463672, #559cac);
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+  .navbar {
+  background: linear-gradient(90deg, #015c10, #014f63);   
+  }
+
+
+  .navbar li {
+    padding-inline: 20px;
+  }
+
+
+  .navbar #logo {
+    font-size: 22px;
+    margin-left: 13px;
+  }
+
+
+  .image-section {
+    grid-column: 1/11;
+    padding-top: 10px;
+  }
+
+  .image-section img {
+    width: 270px;
+    height: 270px;
+  }
+
+  .text-section {
+    grid-column: 1/11;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  .text-section li:nth-child(1) {
+    font-size: 1.5rem;
+  }
+
+  .text-section li:nth-child(2) {
+    font-size: 1.2rem;
+  }
+
+  .text-section p {
+    margin-top: 40px;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+
+  @media screen and (max-width: 600px) {
+  body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; 
+  width: 100%;
+  background: linear-gradient(135deg, #7b618b, #463672, #7ac4d4);
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    
+
+    .navbar {
+    background: linear-gradient(90deg, #01420c, #013947);  
+    }
+
+
+    .navbar li {
+      padding-inline: 5px;
+    }
+
+
+    .navbar #logo {
+      font-size: 20px;
+      margin-left: 11px;
+    }
+
+
+
+    .image-section {
+      grid-column: 1/11;
+    }
+
+    .image-section img {
+      width: 260px;
+      height: 260px;
+    }
+
+    .text-section {
+      grid-column: 1/11;
+      text-align: center;
+    }
+
+    .text-section li:nth-child(1) {
+      font-size: 1.5rem;
+    }
+
+    .text-section li:nth-child(2) {
+      font-size: 1.1rem;
+    }
+
+
+    .text-section p {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 1.rem;
+      color: white;
+    }
+  }
+
+  
+  @media screen and (max-width: 500px) {
+  body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; 
+  width: 100%;
+  background: linear-gradient(135deg, #65586d, #9277dd, #a2e1f0);
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+    .navbar {
+    background: linear-gradient(90deg, #012e08, #012933); 
+    }
+
+    .navbar ul {
+      display: none;
+    }
+
+    .text-section :hover {
+      color: rgb(15, 247, 27);
+
+    }
+
+    @media screen and (min-width: 501px) {
+      .navbar #menu {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .navbar #menu {
+        display: block;
+        float: right;
+        font-size: 30px;
+        color: rgb(253, 9, 9);
+        cursor: pointer;
+      }
+    }
+
+    .navbar #logo {
+      font-size: 24px;
+      margin-left: 18px;
+
+    }
+
+    .text-section li:nth-child(1) {
+      font-size: 1.2rem;
+    }
+
+    .text-section li:nth-child(2) {
+      font-size: 1.2rem;
+    }
+
+    .text-section p {
+      font-size: 1.2rem;
+    }
+
+  @media screen and (max-width: 400px) {
+  body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; 
+  width: 100%;
+  background: linear-gradient(135deg, #7b777e, #717174, #454747);
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+      .navbar {
+      background: linear-gradient(90deg, #001b04, #676969);  
+      }
+
+      .navbar ul {
+        display: none;
+      }
+
+      .text-section :hover {
+        color: rgb(28, 248, 8);
+
+      }
+
+      .navbar #logo {
+        font-size: 20px;
+        margin-left: 20px;
+        color: #e63e0b;
+      }
+
+      .navbar #menu {
+        display: block;
+        float: right;
+        font-size: 25px;
+        color: rgb(32, 17, 243);
+        cursor: pointer;
+      }
+
+      .text-section {
+        grid-column: 1/11;
+        text-align: center;
+      }
+
+      .text-section li:nth-child(1) {
+        font-size: 1rem;
+      }
+
+      .text-section li:nth-child(2) {
+        font-size: 1rem;
+      }
+
+      .text-section p {
+        font-size: 1rem;
+
+
+        .image-section {
+          grid-column: 1/11;
+        }
+
+
+        .image-section img {
+          width: 200px;
+          height: 200px;
+        }
+
+      }
+
+
+
+    }
+
+
+    @media screen and (max-width: 300px) {
+      body {
+        background-color: #c772ff;
+        
+      }
+
+      .navbar {
+        background-color: #eaf7f7;
+      }
+
+      .navbar ul {
+        display: none;
+      }
+
+      .text-section :hover {
+        color: rgb(4, 238, 43);
+
+      }
+
+      .navbar #logo {
+        font-size: 10px;
+        margin-left: 20px;
+        color:#e63e0b ;
+      }
+
+      .navbar #menu {
+        display: block;
+        float: right;
+        font-size: 20px;
+        color: rgb(7, 4, 238);
+        cursor: pointer;
+      }
+
+
+      .image-section {
+        grid-column: 1/11;
+      }
+
+      .text-section {
+        grid-column: 1/11;
+        text-align: center;
+      }
+
+      .text-section li:nth-child(1) {
+        font-size: 1rem;
+      }
+
+      .text-section li:nth-child(2) {
+        font-size: .7rem;
+      }
+
+      .text-section p {
+        font-size: 1rem;
+
+
+
+      }
+
+
+
+    }
+
+  }
+}
