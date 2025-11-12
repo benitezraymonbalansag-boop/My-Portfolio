@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grid-container">
+    <div class="navbar">
+      <div id="logo">My Portfolio</div>
+      <span id="menu">&#9776;</span>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="image-section">
+      <img src="raymon.jpg" alt="Profile Picture">
+    </div>    
+
+    <div class="text-section">
+      <ul>
+        <li>CONTACT ME</li>
+      </ul>
+      <p>
+        📧 Email: 
+        <a href="mailto:benitezraymonbalansag@gmail.com">benitezraymonbalansag@gmail.com</a><br>
+        📱 Phone: +63 9533177337<br>
+        🌐 Facebook: 
+        <a href="https://www.facebook.com/raymon.benitez.12" target="_blank">
+          Benitez Raymon Balansag
+        </a><br>
+        📸 Instagram: 
+        <a href="https://www.instagram.com/raymonbalansagbenitez" target="_blank">
+          @raymonbalansagbenitez
+        </a>
+      </p>
+    </div>
+
+  <script>
+    const menu = document.getElementById('menu');
+    const navLinks = document.getElementById('nav-links');
+
+    menu.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    const links = document.querySelectorAll('#nav-links a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>

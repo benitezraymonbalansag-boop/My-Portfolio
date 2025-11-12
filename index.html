@@ -5,6 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+   
+    @media screen and (max-width: 700px) {
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: blue; 
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 150px;
+        text-align: right;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .navbar ul.show {
+        display: flex;
+      }
+
+      #menu {
+        display: block;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+      }
+    }
+
+    
+    @media screen and (min-width: 701px) {
+      #menu {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -13,12 +48,11 @@
     
     <div class="navbar">
       <div id="logo">My Portfolio</div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
-
       <span id="menu">&#9776;</span>
     </div>
 
@@ -27,16 +61,27 @@
       <img src="raymon.jpg" alt="Profile Picture">
     </div>
 
+    
     <div class="text-section">
       <ul>
         <li>Hi I'm Raymon B. Benitez</li>
-        <li>BSINT-3rd Year Student</li>
+        <li>A BSINT - 3rd Year Student</li>
       </ul>
       <p>"Confidence begins when you believe in your own magic"</p>
     </div>
 
     <div class="footer"></div>
   </div>
+
+  
+  <script>
+    const menu = document.getElementById('menu');
+    const navLinks = document.getElementById('nav-links');
+
+    menu.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 
 </body>
 </html>

@@ -37,7 +37,6 @@ body {
   text-shadow: 0 0 10px rgba(255,255,255,0.8);
   animation: pulseGlow 3s ease-in-out infinite;
 }
-
 @keyframes pulseGlow {
   0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 64, 0.6), 0 0 20px rgba(0, 17, 255, 0.6); }
   50% { box-shadow: 0 0 40px rgba(255, 100, 0, 0.9), 0 0 40px rgba(0, 255, 255, 0.8); }
@@ -640,5 +639,32 @@ body {
 
     }
 
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: blue;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 150px;
+    text-align: right;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  #menu {
+    display: block;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
   }
 }
